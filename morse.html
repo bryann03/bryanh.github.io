@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/morse.css" />
+
+    <!--external imports-->
+    <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css">
+    <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+    <script src="archivosExternos/js/popper.min.js"></script>
+    <script src="archivosExternos/js/bootstrap.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="menu">
+       <p><span id="puntos"> </span></p> 
+    </div> -->
+    <div id="pantalla">
+      <div id="micro">
+        <img id="jugador" src="img/grabadora-de-voz.png" alt="Jugador" />
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Quieres volver a jugar?
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              id="si"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Si
+            </button>
+            <button id="no" type="button" class="btn btn-primary">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <img src="img/morseSinFondo.png" />
+    <span id="nuevaPalabra"></span>
+  </footer>
+  <script src="js/jquery-git.js"></script>
+  <script src="js/morse.js"></script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <link rel="stylesheet" type="text/css" href="css/radioGame.css" />
+    <link rel="stylesheet" type="text/css" href="css/estiloLetrasTitulos.css" />
+    <link rel="stylesheet" type="text/css" href="css/unselectable.css" />
+    <script src="js/juegoAvatar.js"></script>
+    <script src="js/segundaPantalla.js"></script>
+
+    <!--avatar-->
+    <script src="js/avatar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/avatar.css" />
+
+    <!--external imports-->
+    <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css" />
+    <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+    <script src="archivosExternos/js/popper.min.js"></script>
+    <script src="archivosExternos/js/bootstrap.min.js"></script>
+
+    <title>RADIO GAME</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class=tituloRepo>
+            <img id="botonAtras" src="img/flechatras.png" alt="" onclick="goBack()">
+            <h3>
+                <span>R</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>O</span>
+                <span>&nbsp;</span>
+                <span>G</span>
+                <span>A</span>
+                <span>M</span>
+                <span>E</span>
+            </h3>
+
+        </div>
+        <div id="box">
+
+        </div>
+
+        <div id="buttonYpuntuacion">
+            <button class="button-animation" id="buttonStartJuego">JUMP</button>
+            <button class="button-animation" id="buttonStartJuego" onclick="reiniciarJuego()">
+                DUCK
+            </button>
+            <!-- <button id="buttonResetJuego">RESET</button> -->
+
+            <!--<p>PUNTUACION: </p>-->
+            <p id="elementPuntos">Puntos: 0</p>
+        </div>
+
+        <!-- MODAL -->
+
+    </div>
+
+    
+    <div id="avatar">
+        <div id="click"></div>
+        <div id="burbuja">
+          <span id="textoAvatar"></span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        showAvatar(document.getElementById('avatar'));
+        var texto = 'Siento un pequeño dejavu  .'
+        window.onload = function(){
+          setTimeout(function(){
+            dira(texto);
+          }, 1000);
+        }
+      </script>
+</body>
+
+</html>

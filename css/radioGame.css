@@ -1,0 +1,16 @@
+body {
+  background-image: url("../img/fondomicro.jpg");
+  background-size: cover;
+
+  font-size: 2vh;
+  
+}
+
+#box{
+width: 100vh;
+height: 70vh;
+background-color: black;
+display: block;
+    margin-left: auto;
+    margin-right: auto
+}

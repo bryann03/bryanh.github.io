@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topos</title>
+
+        <!--avatar-->
+        <script src="js/avatar.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/avatar.css" />
+
+    <!--external imports-->
+    <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css">
+    <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+    <script src="archivosExternos/js/popper.min.js"></script>
+    <script src="archivosExternos/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/davidLetters.css">
+    <link rel="stylesheet" href="css/topos.css">
+    <script src="js/topos.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div style="width: 10%; float:left; right: 0%;">
+                <img id="buttonHome" style="width: 80%;" cursor="pointer" src="./img/back.svg">
+            </div>
+            <div style="width: 90%; float:left; text-align: center; margin-left: 0%;">
+                <h3>
+                    <span>A</span>
+                    <span>T</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>P</span>
+                    <span>A</span>
+                    <span>L</span>
+                    <span>O</span>
+                    <span>S</span>
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div style="width: 50%; float:left">
+                    <h2>POINTS: </h2>
+                </div>
+                <div style="width: 50%; float:right">
+                    <h2 id="points">0</h2>
+                </div>
+            </div>
+
+            <div class="col">
+                <div style="width: 50%; float:left">
+                    <h2>TIMER: </h2>
+                </div>
+                <div style="width: 50%; float:right">
+                    <h2 id="timer">0s</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top: 5%;">
+            <div class="col text-center">
+                <img class="pipeline" src="./img/pipeline.png" alt="">
+                <img class="topo" src="./img/topo.png" alt="">
+            </div>
+            <div class="col text-center">
+                <img class="pipeline" src="./img/pipeline.png" alt="">
+                <img class="topo" src="./img/topo.png" alt="">
+            </div>
+            <div class="col text-center">
+                <img class="pipeline" src="./img/pipeline.png" alt="">
+                <img class="topo" src="./img/topo.png" alt="">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 5%;">
+            <div class="col text-center">
+                <img class="pipeline " src="./img/pipeline.png" alt="">
+                <img class="topo" src="./img/topo.png" alt="">
+            </div>
+            <div class="col text-center">
+                <img class="pipeline" src="./img/pipeline.png" alt="">
+                <img class="topo" src="./img/topo.png" alt="">
+            </div>
+            <div class="col text-center">
+                <img class="pipeline" src="./img/pipeline.png" alt="">
+                <img class="topo" src="./img/topo.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">PUNTUACIÓN:</h5>
+                </div>
+                <div class="modal-body">
+                    PUNTOS: <label id="score"></label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="buttonClose"
+                        data-dismiss="modal">CERRAR</button>
+                    <button type="button" class="btn btn-primary" id="buttonAgain">REPETIR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL NOMBRE -->
+    <div class="modal fade" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">INTRODUCE TU NOMBRE:</h5>
+                </div>
+                <div class="modal-body">
+                    <input id="inputName" type="text" class="form-control" placeholder="Username" aria-label="Nombre"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="buttonAccept"
+                        data-dismiss="modal">ACEPTAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>initView()</script>
+    <div id="avatar">
+        <div id="click"></div>
+        <div id="burbuja">
+          <span id="textoAvatar"></span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        showAvatar(document.getElementById('avatar'));
+      </script>
+</body>

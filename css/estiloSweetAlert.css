@@ -1,0 +1,28 @@
+.swal-modal
+{
+	width: 27vw;
+	background-color: #4E5D6C;
+	height: 40vh;
+}
+.swal-text
+{
+	font-size: 2vw;
+	color: white;
+}
+.swal-button
+{
+	font-size: 2vw;
+	background-color: #e64e12;
+	width: 21vw;
+    height: 8vh;
+    margin: 1vw
+}
+.swal-icon img
+{
+    width: 8vw;
+    height: 15vh;
+}
+.swal-footer
+{
+	text-align: center;
+}

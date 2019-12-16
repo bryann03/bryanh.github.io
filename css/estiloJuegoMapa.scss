@@ -1,0 +1,372 @@
+$accentcolor: #fcae2c;
+$lightcolor: #fff;
+$darkcolor: #444;
+
+body
+{
+	text-align: center;
+    background-image: url(../img/fondojuegomapa.jpg);
+	background-size: cover;
+	
+}
+.modal-title
+{
+	font-size: 1.5vw;
+}
+h3
+{
+    text-align: center;
+    color: white;
+	display: inline;
+}
+
+/*h3 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+h3 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+h3 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+h3 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+h3 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+h3 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+h3 span:nth-child(8)
+{
+  animation-delay: 0.7s;
+}
+h3 span:nth-child(9)
+{
+  animation-delay: 0.8s;
+}
+h3 span:nth-child(10)
+{
+  animation-delay: 0.9s;
+}*/
+
+/*h3 span
+{
+  font-family: "Luckiest Guy", cursive;
+  position: relative;
+  top: 1.5vw;
+  display: inline-block;
+  animation: bounce 0.9s ease infinite alternate;
+  font-size: 4vw;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+@keyframes bounce
+{
+  100% {
+    top: -0.5vw;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}*/
+
+.box {
+	position: relative;
+	width: 70vw;
+	height: 70vh;
+    margin-top: 3vh;
+    margin-bottom: 2.5vh;
+}
+
+/*ESTILOS MODAL QUIZ*/
+#modalQuiz
+{
+	left: 9vw;
+}
+#customModal
+{
+  width: 45vw;
+  //height: 50vh;
+  text-align: center;
+}
+
+#modalMargin
+{
+  margin-top: 10vw;
+  margin-right: 55vw;
+  font-family: 'Patrick Hand', cursive;
+}
+p
+{
+  font-size: 2vw;
+}
+
+/*ESTILO GROUP RADIO-BUTTON*/
+
+form {
+	max-width: 100%;
+}
+.radiobtn {
+	position: relative;
+  	display: block;
+  	margin-top: 30px;
+	label {
+		display: block;
+		background: lighten($accentcolor, 30%);
+		color: $darkcolor;
+		border-radius: 5px;
+		padding: 10px 20px;
+		border: 2px solid lighten($accentcolor, 20%);
+    	margin-bottom: 5px;
+    	font-size: 2vw;
+		cursor: pointer;
+		&:after,
+		&:before {
+			content: "";
+			position: absolute;
+			right: 11px;
+			top: 20px;
+			width: 0px;
+      		height: 0px;
+			border-radius: 3px;
+			background: lighten($accentcolor, 15%);
+		}
+		&:before {
+			background: transparent;
+			transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s,
+				0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
+			z-index: 2;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-size: 2.5vw;
+			background-position: center;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS4zIDEzLjIiPiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LjcuOGwtLjQtLjRhMS43IDEuNyAwIDAgMC0yLjMuMUw1LjIgOC4yIDMgNi40YTEuNyAxLjcgMCAwIDAtMi4zLjFMLjQgN2ExLjcgMS43IDAgMCAwIC4xIDIuM2wzLjggMy41YTEuNyAxLjcgMCAwIDAgMi40LS4xTDE1IDMuMWExLjcgMS43IDAgMCAwLS4yLTIuM3oiIGRhdGEtbmFtZT0iUGZhZCA0Ii8+PC9zdmc+);
+		}
+	}
+	input[type="radio"] {
+    display: none;
+	position: absolute;
+    margin-top: 5px;
+	width: 100px;
+	height: 100px;
+		appearance: none;
+		&:checked + label {
+			background: lighten($accentcolor, 15%);
+			//animation-name: blink;
+			animation-duration: 0.5s;
+			border-color: $accentcolor;
+			&:after {
+				background: $accentcolor;
+				width: 3vw;
+				height: 5vh;
+			}
+			&:before {
+				width: 3vw;
+				height: 4vh;
+			}
+		}
+	}
+}
+
+@keyframes blink {
+	0% {
+		background-color: lighten($accentcolor, 15%);
+	}
+	10% {
+		background-color: lighten($accentcolor, 15%);
+	}
+	11% {
+		background-color: lighten($accentcolor, 20%);
+	}
+	29% {
+		background-color: lighten($accentcolor, 20%);
+	}
+	30% {
+		background-color: lighten($accentcolor, 15%);
+	}
+	50% {
+		background-color: lighten($accentcolor, 20%);
+	}
+	45% {
+		background-color: lighten($accentcolor, 15%);
+	}
+	50% {
+		background-color: lighten($accentcolor, 20%);
+	}
+	100% {
+		background-color: lighten($accentcolor, 15%);
+	}
+}
+
+#userImage
+{
+    position: absolute;
+    height: 13vh;
+    width: 7vw;
+	z-index: 2;
+	
+	//POSICIÓN INICIAL
+    bottom: -15px;
+    left: 90px;
+
+	/*POSICIÓN PRIMERA PREGUNTA
+	bottom: 350px;
+	left: 20px;*/
+
+	/*POSICIÓN SEGUNDA PREGUNTA
+	bottom: 350px;
+	left: 345px;*/
+
+	/*POSICION TERCERA PREGUNTA
+	top: 10px;
+	left: 345px;*/
+
+	/*POSICIÓN CUARTA PREGUNTA
+	top: 10px;
+	left: 675px;*/
+
+	/*POSICIÓN QUINTA PREGUNTA
+	bottom: 350px;
+	left: 675px;*/	
+
+
+	
+	/*POSICIÓN PRIMERA PREGUNTA
+	bottom: 685px;
+	left: 125px;*/
+
+	/*POSICIÓN SEGUNDA PREGUNTA
+	bottom: 685px;
+	left: 992px;*/
+
+	/*POSICION TERCERA PREGUNTA
+	botoom: 1267px;
+	left: 995px;*/
+
+	/*POSICIÓN CUARTA PREGUNTA
+	botoom: 1267px;
+	left: 1740px;*/
+
+	/*POSICIÓN QUINTA PREGUNTA
+	top: 600px;
+	left: 1740px;*/
+		
+	/*POSICIÓN PREMIO
+	bottom: 685px;
+	left: 2511px;*/
+}
+#mapaImage
+{
+	position: relative;
+	z-index:1;
+}
+
+p
+{
+	display: inline;
+}
+button
+{
+	height: 6vh;
+    width: 16vw;
+}
+#spanCerrar
+{
+	font-size: 2.5vw;
+    margin-left: 13vw;
+}
+#buttonComprobar
+{
+	font-size: 3vh;
+    height: 10vh;
+	background-color: #e64e12;
+	font-family: 'Patrick Hand', cursive;
+}
+#buttonStartJuego
+{
+    height: 11vh;
+    width: 19vw;
+	font-size: 1.5vw;
+	margin-right: 2vw;
+	font-family: "Luckiest Guy", cursive;
+	box-sizing: border-box;
+}
+.contenedor
+{
+	margin-left: 15vw;
+	margin-right: 15vw;
+	width: 70vw;
+	text-align: center;
+}
+#buttonYpuntuacion
+{
+	width: 70vw;
+}
+.modal-footer
+{
+	margin: auto;
+}
+#footer-modal
+{
+	background: #4E5D6C;
+}
+.swal-modal
+{
+	width: 35vw;
+	background-color: #4E5D6C;
+	height: 40vh;
+}
+.swal-text
+{
+	font-size: 2vw;
+	color: white;
+}
+.swal-button
+{
+	font-size: 2vw;
+	background-color: #e64e12;
+	width: 21vw;
+    height: 8vh;
+    margin: 1vw
+}
+.swal-icon img
+{
+    width: 8vw;
+    height: 15vh;
+}
+.swal-footer
+{
+	text-align: center;
+}
+#elementPuntos
+{
+	font-size: 4.3vh;
+	font-family: "Luckiest Guy", cursive;
+	margin-left: 8.5vw;
+	text-align: center;
+}
+#botonAtras
+{
+	margin-left: 5vw;
+	margin-top: 1vw;
+	width: 5.5vw;
+  	height: 9vh;
+  	float: left;
+}
+#botonHome
+{
+	margin-right: 5vw;
+	margin-top: 0.5vw;
+	width: 5.5vw;
+	height: 9vh;
+	float: right;
+}

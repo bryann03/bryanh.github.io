@@ -1,0 +1,189 @@
+body
+{
+  background-image: url(../img/fondomicro.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenedor
+{
+  margin-left: 13vw;
+  margin-right: 13vw;
+  width: 75vw;
+	text-align: center;
+}
+.cardJuego
+{
+  height: 37vh;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
+#tituloJuego
+{
+  margin-top: 0.5vw;
+  font-size: 4vw;
+  font-family: "Luckiest Guy", cursive;
+}
+h3
+{
+  margin-right: 10vw;
+}
+
+.buttonJugar
+{
+  font-size: 2vw;
+  width: 23vw;
+  height: 10vh;
+  margin-top: 2vh;
+  background-color: #e64e12;
+  color: #FFF;
+}
+.frontGameBryan
+{
+  background-image: url(../img/fotojuegoquiz.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.frontGameMar
+{
+  background-image: url(../img/fotojuegomorse.PNG);
+  background-size: cover;
+}
+.frontGameDavid
+{
+  background-image: url(../img/fotojuegotopos.png);
+  background-size: cover;
+}
+.frontGameDani
+{
+  background-image: url(../img/fotojuegoradio.png);
+  background-size: cover;
+
+}
+
+
+/*------ ESTILO MODAL SWEET -------*/
+.swal-modal
+{
+	width: 30vw;
+	background-color: #4E5D6C;
+}
+.swal-text
+{
+	font-size: 2vw;
+	color: white;
+}
+.swal-button
+{
+	font-size: 2vw;
+	background-color: #e64e12;
+	width: 21vw;
+  height: 8vh;
+  margin: 1vw
+}
+.swal-icon img
+{
+    width: 8vw;
+    height: 15vh;
+}
+.swal-footer
+{
+	text-align: center;
+}
+
+/*--------------- FLIP CARD ---------------*/
+#labelCard {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: contents;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+  .card div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 2px;
+  }
+
+  .card .back {
+      background: #222;
+      color: #FFF;
+      -webkit-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+  }
+
+input {
+  display: none;
+}
+
+:checked + .card {
+  transform: rotateX(180deg);
+}
+
+#labelCard:checked + .card {
+  transform: rotateX(160deg);
+  box-shadow: 0 20px 20px rgba(255,255,255,.2);
+}
+
+/* ------------------------------ */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:0.5s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay:0.9s;
+  animation-delay: 0.5s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 0.7s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 0.9s;
+}

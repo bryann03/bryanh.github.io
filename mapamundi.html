@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapa universal</title>
+
+    <!--avatar-->
+    <script src="js/avatar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/avatar.css" />
+
+    <!--external imports-->
+    <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css">
+    <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+    <script src="archivosExternos/js/popper.min.js"></script>
+    <script src="archivosExternos/js/bootstrap.min.js"></script>
+    <script src="js/map.js"></script>
+    <link rel="stylesheet" href="css/davidLetters.css">
+    <link rel="stylesheet" href="css/map.css">
+
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/dataviz.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div style="width: 10%; float:left">
+                <img id="buttonHome" style="width: 80%;" cursor="pointer" src="./img/home.svg">
+            </div>
+            <div style="width: 90%; float:left; text-align: center">
+                <h3>
+                    <span>R</span>
+                    <span>Á</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span>O</span>
+                    <span>&nbsp;</span>
+                    <span>U</span>
+                    <span>N</span>
+                    <span>I</span>
+                    <span>V</span>
+                    <span>E</span>
+                    <span>R</span>
+                    <span>S</span>
+                    <span>A</span>
+                    <span>L</span>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="divMap">
+        <div class="col">
+            <script>
+                am4core.ready(initMap);
+            </script>
+            <div id="chartdiv"></div>
+            <div id="divRadioDisplay">
+                <div id="divPlayButton">
+                    <img id="imgPlayButton" src="./img/play-button.svg">
+                </div>
+                <div style="width: 60%; float:right">
+                    <label id="currentRadio" style="font-size: 2vh">Pulsa sobre los botones amarillos!</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="avatar">
+        <div id="click"></div>
+        <div id="burbuja">
+          <span id="textoAvatar"></span>
+        </div>
+      </div>
+    <script type="text/javascript">
+        showAvatar(document.getElementById('avatar'));
+        var selecciona = 'Personalmente me gusta la de Moscow'
+        var texto = 'Selecciona un punto amarillo para escuchar la radio de esa localidad'
+        document.getElementById('click').onmousedown = function () {
+          dira(selecciona);
+        };
+    
+    
+        window.onload = function(){
+          setTimeout(function(){
+            dira(texto);
+          }, 1000);
+      };
+        
+      </script>
+</body>

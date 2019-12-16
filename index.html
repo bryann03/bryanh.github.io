@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>mNactec</title>
+
+  <script src="js/ficheroJS.js"></script>
+
+  <!--avatar-->
+  <script src="js/avatar.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/avatar.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/estiloSweetAlert.css" />
+  <link rel="stylesheet" type="text/css" href="css/estilosSCSS.css" />
+  <link rel="stylesheet" type="text/css" href="css/animacionBoton.css" />
+  <link rel="stylesheet" type="text/css" href="css/estiloLetrasTitulos.css" />
+  <link rel="stylesheet" type="text/css" href="css/unselectable.css" />
+
+  <!--external imports-->
+  <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css" />
+  <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+  <script src="archivosExternos/js/popper.min.js"></script>
+  <script src="archivosExternos/js/bootstrap.min.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+</head>
+
+<body>
+  <div class="contenedor">
+    <div class="tituloRepo">
+      <h3>
+        <span>w</span>
+        <span>e</span>
+        <span>l</span>
+        <span>c</span>
+        <span>o</span>
+        <span>m</span>
+        <span>e</span>
+        <span>&nbsp;</span>
+        <span>t</span>
+        <span>o</span>
+        <span>&nbsp;</span>
+        <span>m</span>
+        <span>N</span>
+        <span>A</span>
+        <span>C</span>
+        <span>T</span>
+        <span>E</span>
+        <span>C</span>
+      </h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card border-primary mb-3">
+          <img src="img/mapamundi.jpg" class="card-img-top" alt="..." id="imagen-card" />
+          <div class="card-body">
+            <h4 class="card-title">Mapamundi</h4>
+            <p class="card-text">
+              ¿Qué estará escuchando el resto del mundo?
+            </p>
+          </div>
+          <!--hay un bug de tiempo por la animacion-->
+          <button id="buttonsIndex" class="button-animation" onclick="window.location.href = 'mapamundi.html';"
+            type="button">
+            >>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-primary mb-3">
+          <img src="img/radio.jpg" class="card-img-top" alt="..." id="imagen-card" />
+          <div class="card-body">
+            <h4 class="card-title">¿Cómo funciona?</h4>
+            <p class="card-text">
+              Descubre cómo viajan las ondas de radio desde el estudio hasta
+              tu dispositvo.
+            </p>
+          </div>
+          <button id="buttonsIndex" class="button-animation" type="button" onclick="mostrarAviso()">
+            >>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-primary mb-3" id="custom-carta">
+          <img src="img/juegos.jpg" class="card-img-top" alt="..." id="imagen-card" />
+          <div class="card-body">
+            <h4 class="card-title">¿Una partidita?</h4>
+            <p class="card-text">
+              ¡Entra y diviertete con los últimos juegos del mercado y los
+              mejores gráficos!
+            </p>
+          </div>
+          <button id="buttonsIndex" class="button-animation" onclick="window.location.href = 'repositorioJuegos.html'"
+            type="button">
+            >>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button id="somos" type="button" href="#" class="btn-outline-primary buttonAboutUs">
+      ¿Quienes somos?
+    </button>
+  </div>
+
+  <div id="avatar">
+    <div id="click"></div>
+    <div id="burbuja">
+      <span id="textoAvatar"></span>
+    </div>
+  </div>
+  <script type="text/javascript">
+    showAvatar(document.getElementById('avatar'));
+    var selecciona = 'Selecciona una de las opciones para explorar aún mas de la radio'
+    var texto = 'Hola chic@s, me llamo RADI, les voy a enseñar un poco acerca de la radio, y como funciona, comencemos!!'
+    var somos = 'Mis creadores y los de esta pagina, son un grupo de jovenes aspirantes a ser grandes creadores de paginas web, saludos a Bryan, David, Mar y Daniel'
+    
+    document.getElementById('click').onmousedown = function () {
+      dira(selecciona);
+    };
+
+    document.getElementById('somos').onmousedown = function () {
+      dira(somos);
+    };
+
+    window.onload = function(){
+      setTimeout(function(){
+        dira(texto);
+      }, 2000);
+  };
+    
+  </script>
+</body>
+
+</html>
+
+
+<!-- <div class='content'>
+        <div class="divAboutBryan col-5">
+            <img src="img/avatarbryan.jpg" alt="">
+            <h1>Byan H</h1>
+        </div>
+        <div class="divAboutDani col-5">
+            <img src="img/avatarbryan.jpg" alt="">
+            <h1>Daniel G</h1>
+        </div>
+        <div class="divAboutMar col-5">
+            <img src="img/avatarbryan.jpg" alt="">
+            <h1>Mar B</h1>
+        </div>
+        <div class="divAboutDavid col-5">
+            <img src="img/avatarbryan.jpg" alt="">
+            <h1>David G</h1>
+        </div>
+    </div> -->

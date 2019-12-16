@@ -1,0 +1,50 @@
+#avatar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  pointer-events: none;
+}
+#avatarUP {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  pointer-events: none;
+}
+#canvas {
+  width: 70vh;  
+}
+#click{
+  position: absolute;
+  left: 4vh;
+  bottom: 6vh;
+  margin: 0;
+  height: 20vh;
+  width: 30vh;
+  pointer-events: all;
+}
+#burbuja {
+  width: 30vh;
+  height: 17vh;
+  position: absolute;
+  justify-content: flex-end;
+  overflow-wrap: break-word;
+  top: 1.9vh;
+  left: 30.5vh;
+  
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+#textoAvatar {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 1.5vw;
+  font-family: 'Patrick Hand', cursive;
+  color: black;
+}
+

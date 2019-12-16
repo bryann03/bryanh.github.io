@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Repositorio de Juegos</title>
+
+    <!--avatar-->
+    <script src="js/avatar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/avatar.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/repositorioJuegos.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloLetrasTitulos.css">
+    <link rel="stylesheet" type="text/css" href="css/unselectable.css" />
+    <script src="js/segundaPantalla.js"></script>
+    <!--external imports-->
+    <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css">
+    <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+    <script src="archivosExternos/js/popper.min.js"></script>
+    <script src="archivosExternos/js/bootstrap.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="tituloRepo">
+            <img id="botonAtras" src="img/home.svg" alt="" onclick="goHome()">
+            <h3>
+                <span>J</span>
+                <span>U</span>
+                <span>E</span>
+                <span>G</span>
+                <span>O</span>
+                <span>S</span>
+            </h3>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-5 cardJuego fade-in one">
+                <label id="labelCard">
+                    <input type="checkbox" />
+                    <div class="card">
+                        <div class="front">
+                            <div class="frontGameBryan"></div>
+                        </div>
+                        <div class="back">
+                            <h1 id="tituloJuego">RADIO QUIZ</h1>
+                            <button class="buttonJugar" onclick="window.location.href = 'gameDecisiones.html'">
+                                JUGAR</button>
+                            <button class="buttonJugar" onclick="verRanking()"> VER RANKING</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="col-5 cardJuego fade-in two">
+                <label id="labelCard" class="fade-in two">
+                    <input type="checkbox" />
+                    <div class="card">
+                        <div class="frontGameMar"></div>
+                        <div class="back">
+                            <h1 id="tituloJuego">MORSE GAME</h1>
+                            <button class="buttonJugar" onclick="window.location.href = 'morse.html'"
+                                type="button">JUGAR</button>
+                            <button class="buttonJugar" onclick="verRanking()" type="button">VER RANKING</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-5 cardJuego fade-in three">
+                <label id="labelCard" class="fade-in three">
+                    <input type="checkbox" />
+                    <div class="card">
+                        <div class="frontGameDavid"></div>
+                        <div class="back">
+                            <h1 id="tituloJuego">WHAC-A-MOLE</h1>
+                            <button class="buttonJugar" onclick="window.location.href = 'topos.html'">
+                                JUGAR</button>
+                            <button class="buttonJugar" onclick="window.location.href = 'toposRanking.html'"> VER
+                                RANKING</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="col-5 cardJuego fade-in four">
+                <label id="labelCard" class="fade-in four">
+                    <input type="checkbox" />
+                    <div class="card">
+                        <div class="frontGameDani">
+                        </div>
+                        <div class="back">
+                            <h1 id="tituloJuego">RADIO GAME</h1>
+                            <button class="buttonJugar" onclick="window.location.href = 'radioGame.html'">
+                                JUGAR</button>
+                            <button class="buttonJugar" onclick="verRanking()"> VER RANKING</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div id="avatar">
+        <div id="click"></div>
+        <div id="burbuja">
+            <span id="textoAvatar"></span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        showAvatar(document.getElementById('avatar'));
+        var selecciona = 'Te recomiendo el juego que tienes que atrapar todos los parlantes,          aunque tienes que ser muy rapido'
+        var texto = 'Selecciona uno de nuestros increibles juegos'
+        document.getElementById('click').onmousedown = function () {
+            dira(selecciona);
+        };
+        window.onload = function () {
+            setTimeout(function () {
+                dira(texto);
+            }, 2000);
+        };
+
+    </script>
+</body>
+
+</html>

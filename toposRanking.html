@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topos</title>
+
+    <!--avatar-->
+    <script src="js/avatar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/avatar.css" />
+
+    <!--external imports-->
+    <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css">
+    <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+    <script src="archivosExternos/js/popper.min.js"></script>
+    <script src="archivosExternos/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/davidLetters.css">
+    <link rel="stylesheet" href="css/toposRanking.css">
+    <script src="js/toposRanking.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div style="width: 10%; float:left; right: 0%;">
+                <img id="buttonHome" style="width: 80%;" cursor="pointer" src="./img/home.svg">
+            </div>
+            <div style="width: 90%; float:left; text-align: center">
+                <h3>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>N</span>
+                    <span>K</span>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>G</span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 5%;">
+            <div class="col-2">
+                <h3>
+                    <span>1</span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="name1" class="participant"></span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="point1" class="participant"></span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <h3>
+                    <span>2</span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="name2" class="participant"></span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="point2" class="participant"></span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <h3>
+                    <span>3</span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="name3" class="participant"></span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="point3" class="participant"></span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <h3>
+                    <span>4</span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="name4" class="participant"></span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="point4" class="participant"></span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <h3>
+                    <span>5</span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="name5" class="participant"></span>
+                </h3>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h3>
+                    <span id="point5" class="participant"></span>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <script>initView()</script>
+
+    <div id="avatar">
+        <div id="click"></div>
+        <div id="burbuja">
+            <span id="textoAvatar"></span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        showAvatar(document.getElementById('avatar'));
+        var texto = 'Increible partida, aqui tienes a los mejores 5, intenta romper el record!'
+        window.onload = function () {
+            setTimeout(function () {
+                dira(texto);
+            }, 500);
+        }
+    </script>
+
+</body>

@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'morse';
+    src: url('morse.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    /* https: //cybmeta.com/font-face-como-utilizar-cualquier-fuentetipografia-en-tu-web */
+}
+
+header {
+    background-color: #3C6997;
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+    position: fixed;
+}
+
+.menu p {
+    border: 3px #FF7C4D;
+    background-color: #FF7C4D;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+#nuevaPalabra {
+    float: right;
+    text-align: center;
+    color: #FF7C4D;
+    font-size: 12ex;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+}
+
+body {
+    background: #5ADBFF;
+}
+
+footer {
+    background-color: #3C6997;
+    width: 100%;
+    bottom: 0;
+    height: 200px;
+    position: fixed;
+    box-shadow: 1px 1px 5px #000;
+}
+
+#micro {
+    position: absolute;
+    width: 100%;
+    height: 95px;
+    left: 0px;
+    right: 0px;
+    bottom: 185px;
+}
+
+#jugador {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 0px;
+}
+
+#pantalla {
+    background-color: #5ADBFF;
+    width: 100%;
+    height: 100vh;
+}
+
+.caida {
+    position: relative;
+    -webkit-animation: mymove 2s;
+    animation: mymove 2s;
+    font-family: 'morse';
+    font-size: 50px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 550px;
+    }
+}

@@ -1,0 +1,46 @@
+@media (min-width: 4096px) {
+    .container{
+        max-width: 2610px;
+    }
+}
+
+#buttonHome:hover{
+    cursor: pointer;
+}
+
+body {
+    background-image: url("../img/fondomicro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h2 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 3vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.pipeline {
+    max-width: 60%;
+    margin-top: 30%;
+    position: relative;
+    z-index: 2;
+}
+
+.topo {
+    max-width: 35%;
+    position: absolute;
+    left: 32.5%;
+    bottom: 0%;
+    z-index: 1;
+}
+
+.modal-dialog{
+    max-width: 1000px;
+}
+
+.modal-content{
+    zoom:3
+}

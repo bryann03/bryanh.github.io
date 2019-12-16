@@ -1,0 +1,144 @@
+$naranja: #e64e12;
+$button-bg: $naranja;
+$button-text-color: #fff;
+
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+
+/*
+.page-wrap {
+  background-image: url(../img/fondoradio.jpg);
+
+$button: $naranja;
+*/
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+body {
+  background-image: url(../img/fondomicro.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*h3 span
+{
+  font-family: "Luckiest Guy", cursive;
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 0.7s ease infinite alternate;
+  font-size: 4.5vw;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}*/
+
+/*h3 span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+
+h3 span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+}
+
+h3 span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+}
+
+h3 span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+}
+
+h3 span:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+}
+
+h3 span:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+}*/
+
+/*@-webkit-keyframes bounce
+{
+  100% {
+    top: -1vw;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}*/
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0vw);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-1.5vw);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0vw);
+  }
+}
+/*---------------------------*/
+
+.card-title {
+  text-align: center;
+  font-size: 2.5vw;
+}
+.card-text {
+  font-size: 3vh;
+}
+.card-img-top {
+  height: 31vh;
+}
+
+.row {
+  margin-top: 2vw;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card {
+  // animation: float 1.5s ease-in-out infinite;
+  height: 65vh;
+}
+
+/*------------- ESTILO BUTTON -------------*/
+.buttonAboutUs {
+  height: 8vh;
+  font-size: 2.5vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+/*.divAboutBryan
+{
+  display: inline-block;
+}
+.divAboutDani
+{
+  display: inline-block;
+}
+.divAboutMar
+{
+  display: inline-block;
+}
+.divAboutDavid
+{
+  display: inline-block;
+}*/
+#buttonsIndex {
+  height: 10vh;
+  font-size: 3.5vh;
+}
+
+.contenedor {
+  margin-left: 13vw;
+  margin-right: 13vw;
+  width: 75vw;
+  text-align: center;
+}

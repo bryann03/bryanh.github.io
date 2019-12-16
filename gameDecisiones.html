@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/estiloJuegoMapa.css" />
+    <link rel="stylesheet" type="text/css" href="css/animacionBoton.css" />
+    <link rel="stylesheet" type="text/css" href="css/estiloLetrasTitulos.css" />
+    <link rel="stylesheet" type="text/css" href="css/unselectable.css" />
+    <!--avatar-->
+    <script src="js/avatar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/avatar.css" />
+
+    <!--external imports-->
+    <link rel="stylesheet" href="archivosExternos/css/bootstrap.min.css" />
+    <script src="archivosExternos/js/jquery-3.4.1.min.js"></script>
+    <script src="archivosExternos/js/popper.min.js"></script>
+    <script src="archivosExternos/js/bootstrap.min.js"></script>
+    <script src="js/juegoMapa.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/segundaPantalla.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div>
+            <img id="botonAtras" src="img/back.svg" alt=""
+                onclick="window.location.href = 'repositorioJuegos.html'">
+            <h3>
+                <span>R</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>O</span>
+                <span>&nbsp;</span>
+                <span>Q</span>
+                <span>U</span>
+                <span>I</span>
+                <span>Z</span>
+            </h3>
+            <img id="botonHome" src="img/home.svg" alt="" onclick="goHome()">
+        </div>
+        <div class="box">
+            <img src="img/newmap.png" usemap="#image-map" id="mapaImage" />
+            <img src="img/avatar.png" id="userImage" />
+            <!-- <map name="image-map">
+                    <area target="" alt="" title="" onclick="preguntaUno()" coords="22,357,139,436" shape="rect"
+                        id="pregunta1" />
+                    <area target="" alt="" title="" onclick="preguntaDos()" coords="347,357,464,436" shape="rect"
+                        id="pregunta2" />
+                    <area target="" alt="" title="" onclick="preguntaTres()" coords="345,29,462,108" shape="rect"
+                        id="pregunta3" />
+                    <area target="" alt="" title="" onclick="preguntaCuatro()" coords="675,30,792,109" shape="rect"
+                        id="pregunta4" />
+                    <area target="" alt="" title="" onclick="preguntaCinco()" coords="678,357,795,436" shape="rect"
+                        id="pregunta5" />
+                </map> -->
+        </div>
+
+        <div id="buttonYpuntuacion">
+            <button class="button-animation" id="buttonStartJuego">START</button>
+            <button class="button-animation" id="buttonStartJuego" onclick="reiniciarJuego()">
+                REINICIAR
+            </button>
+            <!-- <button id="buttonResetJuego">RESET</button> -->
+
+            <!--<p>PUNTUACION: </p>-->
+            <p id="elementPuntos">Puntos: 0</p>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal" id="modalQuiz">
+            <div class="modal-dialog" role="document" id="modalMargin">
+                <div class="modal-content" id="customModal">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tituloPregunta">
+                            1RA PREGUNTA POR 30 PTS.
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" onclick="cerrarModal()"
+                            aria-label="Close">
+                            <span id="spanCerrar" aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="pregunta">¿A</p>
+                        <br />
+                        <!-- RADIO GROUPS -->
+                        <form>
+                            <div class="radiobtn">
+                                <input type="radio" id="opcion1" name="opciones" value="huey" checked />
+                                <label for="opcion1" id="labelOpcion1">Huey</label>
+                            </div>
+                            <div class="radiobtn">
+                                <input type="radio" id="opcion2" name="opciones" value="dewey" />
+                                <label for="opcion2" id="labelOpcion2">Dewey</label>
+                            </div>
+                            <div class="radiobtn">
+                                <input type="radio" id="opcion3" name="opciones" value="louie" />
+                                <label for="opcion3" id="labelOpcion3">Louie</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer" id="footer-modal">
+                        <button type="button" id="buttonComprobar" class="button-animation"
+                            onclick="comprobarRespuesta()">
+                            Comprobar
+                        </button>
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                onclick="cerrarModal()"> Close </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="avatar">
+      <div id="click"></div>
+      <div id="burbuja">
+        <span id="textoAvatar"></span>
+      </div>
+  </div>
+  <script type="text/javascript">
+      showAvatar(document.getElementById('avatar'));
+    </script>
+  </body>
+</html>
